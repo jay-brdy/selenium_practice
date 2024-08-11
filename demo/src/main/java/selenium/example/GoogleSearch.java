@@ -27,7 +27,7 @@ public class GoogleSearch {
             e.printStackTrace();
         }
 
-        //find the link element by class name and click on it
+        //find the link element by cssSelector and click on it
         WebElement link = driver.findElement(By.cssSelector("a.ruhjFe.NJLBac.fl"));
         link.click();
         
