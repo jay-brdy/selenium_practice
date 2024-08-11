@@ -19,6 +19,17 @@ public class GoogleSearch {
 
         //type "blue jay birds" into the serach input + press enter key
         inputElement.sendKeys("blue jay birds" + Keys.RETURN);
+
+        //pause for 3 seconds to load results
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        //find the link element by class name and click on it
+        WebElement link = driver.findElement(By.cssSelector("a.ruhjFe.NJLBac.fl"));
+        link.click();
         
         //pause for 5 seconds to see result
         try {
