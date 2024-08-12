@@ -36,15 +36,17 @@ public class CookieClicker {
             int cookiesCount = Integer.parseInt(cookiesCountText.replace(",", ""));
             
             //check products prices
-            for (int i = 0; i < 19; i++) {
-                //get product price
+            //iterates over products to buy using productIDs - productPrice0, productPrice1, up to productPrice 19
+            for (int i = 0; i < 20; i++) {
+                //get product price, removes commas
                 String productPriceText = driver.findElement(By.id(productPricePrefix + i)).getText().replace(",","");
                
-                //if the product price is not a digit, continue to  next iteration
+                //checks if the product price is not a digit (unavail), continue to  next iteration
                 if (!productPriceText.matches("\\d+")) {
                     continue;
                 }
 
+                //if product price is a number, converts it into integer 
                 int productPrice = Integer.parseInt(productPriceText);
 
                 //if we have enough cookies, buy the product
