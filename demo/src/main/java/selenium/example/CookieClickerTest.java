@@ -20,7 +20,6 @@ class CookieClickerTest {
             cookie.click();
             System.out.println("Clicked on cookie!");
         } catch (Exception e) {
-
         }
     }
 
@@ -28,4 +27,18 @@ class CookieClickerTest {
         driver.close();
         System.out.println("The driver has been closed.");
     }
+
+public static void main(String[] args) {
+     // Create an instance of CookieClickerTest
+     CookieClickerTest test = new CookieClickerTest();
+
+     // Set up the driver
+     test.setUp();
+
+     // Run the first test
+     test.firstTest();
+
+     // Close the browser
+     test.closeBrowser();
+ }
 }
